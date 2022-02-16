@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contacto </title>
+    <link rel="shortcut icon" href="../images/moin-favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="grid-body">
+    <header class="header">
+        <img class="header__img" src="../images/moin-logo.jpg" alt="imagen logo">
+    </header>
+    <nav class="nav">
+            <h1 class="nav__title">MOIN DI</h1>
+            <ul class="nav__links">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html"> Inicio </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="carteras.html"> Carteras </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="accesorios.html"> Accesorios </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="materiales.html"> Materiales </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacto.html"> Contacto </a>
+                </li>
+            </ul>
+    </nav>
+    <main class="main">
+        <div class="contacto">
+            <form class="contacto__form">
+                <h2 class="contacto__title">Contacto</h2>
+                <label class="contacto__label" for="nombre">Nombre:</label>
+                <input class="contacto__input" type="text" name="nombre" placeholder="Tu Nombre" required>
+                <label class="contacto__label" for="email">Email:</label>
+                <input class="contacto__input" type="email" name="email" placeholder="micorreo@email.com" required>
+                <label class="contacto__label" for="descubrir">Como nos descubriste?</label>
+                <select class="contacto__input" name="descubrir">
+                    <option value="eleg" selected disabled>Elegí una opción</option>
+                    <option value="face">Facebook</option>
+                    <option value="insta">Instagram</option>
+                    <option value="reco">Recomendación</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <label class="contacto__label" for="comentarios">Comentarios:</label>
+                <textarea class="contacto__input" name="comentarios" id="consulta" cols="30" rows="10" placeholder="Consultanos lo que quieras" required></textarea>
+                <div>
+                    <input class="contacto__boton" type="reset" value="Borrar">
+                    <input class="contacto__boton" type="submit" value="Enviar">
+                </div>
+            </form>
+            <div class="contacto__redes">
+                <h2 class="contacto__title">Redes sociales</h2>
+                <a class="contacto__img" href="https://www.facebook.com/MoinDiCueros" target="_black"> <img src="../images/facebook.png" alt="logo facebook"> </a>
+                <a class="contacto__img" href="https://www.instagram.com/moindicueros/" target="_black"> <img src="../images/instagram.png" alt="logo instagram"> </a>
+                <a class="contacto__img" href="https://www.whatsapp.com/moindicueros/" target="_black"> <img src="../images/whatsapp.jpg" alt="logo whatsapp"> </a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>2022 - Buenos Aires - Argentina</p>
+    </footer>
+</body>
+</html>
