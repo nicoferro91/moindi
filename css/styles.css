@@ -20,10 +20,6 @@
     "footer";
     grid-template-rows: 15vh auto auto 5vh;
     justify-items: center;
-    /* justify-items: stretch;
-    align-items: stretch; */
-    /* row-gap: 1rem;
-    column-gap: 1rem; */
 }
 
 /* Header */
@@ -80,6 +76,7 @@
 }
 /* Main */
 .main   {
+    grid-area: main;
     margin-left: auto;
     margin-right: auto;
     width: max(80vw, 1200px);
@@ -186,10 +183,6 @@
     border-spacing: 0px;
     width: 100%;
     display: grid;
-    grid-template-areas: 
-    "prod prod prod prod"
-    "prod prod prod prod"
-    "prod prod prod prod";
     row-gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -209,8 +202,6 @@
     top: -0.2rem;
     text-align: center;
     font-size: 1.2rem;
-    /* display: none; */
-    /* visibility: hidden; */
     transition: all 1s;
     opacity: 0;
 }
@@ -223,21 +214,9 @@
     transform: scale(1.25);
 }
 .prod__box:hover .prod__name {
-    /* display: block; */
-    /* visibility: visible; */
     background-color: rgb(255, 245, 225);
     opacity: 100;
 }
-/* Materiales */
-/* .mater {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: rgb(255, 245, 225);
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.2rem;
-} */
 .mater-grid {
     display: grid;
     grid-template-areas: 
@@ -319,7 +298,6 @@
 }
 .contacto__redes {
     grid-area: redes;
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -330,8 +308,8 @@
 
 /* Footer */
 .footer {
+    grid-area: footer;
     display: flex;
-    /* position: sticky; */
     justify-content: center;
     align-items: center;
     bottom: 0px;
@@ -349,11 +327,6 @@
         width: 100%;
     }
     .prod__grid {
-        grid-template-areas: 
-        "prod prod prod"
-        "prod prod prod"
-        "prod prod prod"
-        "prod prod prod";
         grid-template-columns: 1fr 1fr 1fr;
     }
     .prod__title {
@@ -362,22 +335,12 @@
 }
 @media screen and (max-width: 720px) {
     .galeria {
-        grid-template-areas: 
-        "big-pic big-pic wide-pic1"
-        "big-pic big-pic wide-pic2";
         grid-template-columns: 1fr 1fr 1fr;
     }
     .fotos-chicas__bloque {
         flex-basis: 50%;
     }
     .prod__grid {
-        grid-template-areas: 
-        "prod prod"
-        "prod prod"
-        "prod prod"
-        "prod prod"
-        "prod prod"
-        "prod prod";
         grid-template-columns: 1fr 1fr;
     }
     .prod__title {
