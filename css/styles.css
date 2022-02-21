@@ -18,7 +18,7 @@
     "nav"
     "main"
     "footer";
-    grid-template-rows: 15vh auto auto 5vh;
+    grid-template-rows: 20vh auto auto 5vh;
     justify-items: center;
 }
 
@@ -28,8 +28,8 @@
     align-content: center;
     justify-content: center;
     grid-area: header;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .header__img {
     border-radius: 10%;
