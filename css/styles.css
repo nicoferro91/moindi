@@ -194,7 +194,7 @@
     background-color: rgb(255, 245, 225);
     transition: all 1s;
 }
-/* .prod__name {
+.prod__name {
     padding: 10px;
     z-index: 10;
     background-color: rgb(255, 245, 225);
@@ -204,19 +204,19 @@
     font-size: 1.2rem;
     transition: all 1s;
     opacity: 0;
-} */
+}
 .prod__img {
     width: 100%;
     height: 100%;
     border-radius: 2rem;
 }
-/* .prod__box:hover {
+.prod__box:hover {
     transform: scale(1.25);
 }
 .prod__box:hover .prod__name {
     background-color: rgb(255, 245, 225);
     opacity: 100;
-} */
+}
 .mater-grid {
     display: grid;
     grid-template-areas: 
