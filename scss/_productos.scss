@@ -1,0 +1,99 @@
+@import "_variables";
+
+/* Productos */
+.prod {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: $back-pink;
+    font-family: $font-main;
+}
+.prod__title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 200;
+    font-size: 3rem;
+    font-style: italic;
+}
+.prod__grid {
+    border-spacing: 0px;
+    width: 100%;
+    display: grid;
+    row-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.prod__box {
+    width: 240px;
+    height: 240px;
+    align-self: center;
+    justify-self: center;
+    background-color: $back-pink;
+    transition: all 1s;
+}
+.prod__name {
+    padding: 10px;
+    z-index: 10;
+    background-color: $back-pink;
+    position: relative;
+    top: -0.2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: all 1s;
+    opacity: 0;
+}
+.prod__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+.prod__box:hover {
+    transform: scale(1.25);
+}
+.prod__box:hover .prod__name {
+    background-color: $back-pink;
+    opacity: 100;
+}
+.mater-grid {
+    display: grid;
+    grid-template-areas: 
+    "foto titulo"
+    "foto texto";
+    grid-template-columns: 1fr 3fr;
+    padding: 2rem;
+    column-gap: 2rem;
+    justify-items: left;
+    .mater__box {
+        grid-area: foto;
+        width: 240px;
+        height: 240px;
+        align-self: center;
+        justify-self: center;
+    }
+    .mater__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        align-self: center;
+        border-radius: 2rem;
+    }
+    .mater__text {
+        grid-area: texto;
+        font-size: 1.2rem;
+    }
+    .mater__title {
+        grid-area: titulo;
+        align-self: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 200;
+        font-size: 2rem;
+        font-style: italic;
+    }
+}
+/* Si anido esto de abajo deja de funcionar */
+.mater-right {
+    grid-template-areas: 
+    "titulo foto"
+    "texto foto";
+    grid-template-columns: 3fr 1fr;
+}

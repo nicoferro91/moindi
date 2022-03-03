@@ -1,0 +1,43 @@
+@import "_variables";
+/* Barra de navegación */
+/* Cambie el nombre nav a nav__barra porque bootstrap lo destruia */
+.nav__barra {
+    width: 100%;
+    grid-area: nav;
+    z-index: 10;
+    position: sticky;
+    top: 0px;
+    background-color: $strong-pink;
+    overflow: hidden;
+    .nav__title {
+        text-align: center;
+        font-family: $font-main;
+        letter-spacing: 1.5rem;
+        padding-top: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0px;
+    }
+    .nav__links {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0px;
+    }
+    .nav__item {
+        margin: 0.5rem 1rem 0.5rem 1rem;
+    }
+    .nav__link {
+        font-family: $font-main;
+        text-decoration: none;
+        color: black;
+        border-radius: 8px;
+        font-size: 1.5rem;
+        overflow: hidden;
+    }
+    .nav__link:hover {
+        background-color: rgb(255, 200, 130);
+    }
+}
