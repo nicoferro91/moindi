@@ -1,7 +1,7 @@
 {
-  "name": "desafio-c13",
+  "name": "moin-di",
   "version": "1.0.0",
-  "description": "desafio clase 13",
+  "description": "Sitio web para MOIN DI",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicoferro91/desafio-c13"
+    "url": "https://github.com/nicoferro91/moindi"
   },
   "author": "Nicolas Ferro",
   "license": "ISC",

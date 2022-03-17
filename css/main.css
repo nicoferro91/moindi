@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
 /* Variables */
+/* Variables */
 /* Header */
 .header {
   display: flex;
@@ -52,7 +53,6 @@
   .nav__barra .nav__link:hover {
     background-color: #ffc882; }
 
-/* Variables */
 /* Variables */
 /* Contacto */
 .contacto {
@@ -114,8 +114,9 @@
   font-style: italic; }
 
 .prod__grid {
-  border-spacing: 0px;
   width: 100%;
+  height: 100%;
+  border-spacing: 0px;
   display: grid;
   row-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr 1fr; }
@@ -151,29 +152,29 @@
   background-color: #fff5e1;
   opacity: 100; }
 
-.mater-grid {
+.mater-grid, .mater-grid--right {
   display: grid;
   grid-template-areas: "foto titulo" "foto texto";
   grid-template-columns: 1fr 3fr;
   padding: 2rem;
   column-gap: 2rem;
   justify-items: left; }
-  .mater-grid .mater__box {
+  .mater-grid .mater__box, .mater-grid--right .mater__box {
     grid-area: foto;
     width: 240px;
     height: 240px;
     align-self: center;
     justify-self: center; }
-  .mater-grid .mater__img {
+  .mater-grid .mater__img, .mater-grid--right .mater__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     align-self: center;
     border-radius: 2rem; }
-  .mater-grid .mater__text {
+  .mater-grid .mater__text, .mater-grid--right .mater__text {
     grid-area: texto;
     font-size: 1.2rem; }
-  .mater-grid .mater__title {
+  .mater-grid .mater__title, .mater-grid--right .mater__title {
     grid-area: titulo;
     align-self: center;
     margin-top: 1rem;
@@ -182,8 +183,7 @@
     font-size: 2rem;
     font-style: italic; }
 
-/* Si anido esto de abajo deja de funcionar */
-.mater-right {
+.mater-grid--right {
   grid-template-areas: "titulo foto" "texto foto";
   grid-template-columns: 3fr 1fr; }
 
@@ -311,7 +311,7 @@
     grid-template-columns: 1fr 1fr; }
   .prod__title {
     font-size: 1.5rem; }
-  .mater-grid {
+  .mater-grid, .mater-grid--right {
     padding: 1rem;
     column-gap: 1rem; }
   .mater__box {
@@ -354,7 +354,7 @@
     align-items: center; }
   .prod__title {
     font-size: 1.5rem; }
-  .mater-grid {
+  .mater-grid, .mater-grid--right {
     grid-template-areas: "titulo" "foto" "texto";
     justify-items: center;
     grid-template-columns: 100%; }
@@ -379,3 +379,8 @@
   .contacto__redes {
     padding: 0rem;
     padding-top: 2rem; } }
+
+@media screen and (max-height: 600px) {
+  .header {
+    margin-top: 0rem;
+    margin-bottom: 0rem; } }

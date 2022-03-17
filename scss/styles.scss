@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
 
-@import "_header";
-@import "_navbar";
-@import "_variables";
-@import "_contacto";
-@import "_productos";
+@import "variables";
+@import "header";
+@import "navbar";
+@import "contacto";
+@import "productos";
 
 * {
     margin: 0px;
@@ -134,7 +134,7 @@
     padding-right: 1rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: map-get($screen-size, large)) {
     .main {
         margin-left: 0rem;
         margin-right: 0rem;
@@ -147,7 +147,7 @@
         font-size: 2.5rem;
     }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: map-get($screen-size, medium)) {
     .galeria {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -185,7 +185,7 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: map-get($screen-size, small)) {
     .nav__links {
         flex-direction: column;
     }
@@ -256,4 +256,11 @@
         padding: 0rem;
         padding-top: 2rem;
     }
+}
+
+@media screen and (max-height:600px) {
+.header {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
 }
