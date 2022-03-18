@@ -82,6 +82,7 @@
     background-color: $back-pink;
     grid-area: texto;
     display: flex;
+    padding: 2rem 2rem 0 2rem;
     .texto__articulo {
         font-family: $font-main;
     }
@@ -98,6 +99,8 @@
     }
 }
 .fotos-chicas {
+    padding-left: 2rem;
+    padding-right: 2rem;
     background-color: $back-pink;
     grid-area: small;
     display: flex;

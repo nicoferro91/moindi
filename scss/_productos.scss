@@ -6,6 +6,10 @@
     height: $alto;
 }
 
+.card {
+    width: 240px;
+}
+
 .prod {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -26,13 +30,15 @@
     display: grid;
     row-gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
 }
 .prod__box {
-    @include dimension(240px,240px);
+    @include dimension(220px,220px);
     align-self: center;
     justify-self: center;
     background-color: $back-pink;
     transition: all 1s;
+    margin-top: 0.5rem;
 }
 .prod__name {
     padding: 10px;
