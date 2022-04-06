@@ -7,8 +7,15 @@
     z-index: 10;
     position: sticky;
     top: 0px;
-    background-color: $strong-pink;
+    // background-color: $strong-pink;
     overflow: hidden;
+    box-shadow: 0px 0.5rem 2rem 0rem rgba(219, 181, 131, 0.876);
+
+
+    background-image: linear-gradient(45deg,rgb(255, 220, 177),rgb(255, 220, 160),rgb(255, 220, 177),rgb(253, 220, 160),rgb(255, 220, 177),rgb(255, 220, 160),rgb(255, 220, 177),rgb(253, 220, 160));
+    background-size: 100%;
+    
+    
     .nav__title {
         text-align: center;
         font-family: $font-main;
@@ -36,10 +43,22 @@
         border-radius: 8px;
         font-size: 1.5rem;
         overflow: hidden;
-        transition: all 0.4s;
+        transition: background-color 0.4s;
         padding: 0.4rem;
     }
     .nav__link:hover {
         background-color: rgb(255, 200, 130);
+    }
+}
+
+@keyframes bganimation {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0% 50%;
     }
 }

@@ -21,7 +21,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 200;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-style: italic;
 }
 .prod__grid {
@@ -37,31 +37,36 @@
     align-self: center;
     justify-self: center;
     background-color: $back-pink;
-    transition: all 1s;
+    transition: transform 1s;
     margin-top: 0.5rem;
 }
 .prod__name {
     padding: 10px;
     z-index: 10;
-    background-color: $back-pink;
+    // background-color: $back-pink;
     position: relative;
     top: -0.2rem;
     text-align: center;
     font-size: 1.2rem;
-    transition: all 1s;
+    transition: background-color, opacity 1s;
     opacity: 0;
 }
 .prod__img {
     @include dimension(100%,100%);
     border-radius: 2rem;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
 }
 .prod__box:hover {
-    transform: scale(1.25);
+    transform: scale(1.5);
 }
 .prod__box:hover .prod__name {
-    background-color: $back-pink;
+    background-color: rgba(255, 245, 225,0.8);
     opacity: 100;
 }
+/*
+$back-pink: rgb(255, 245, 225);
+$strong-pink: rgb(255, 230, 200);
+*/
 .mater-grid {
     display: grid;
     grid-template-areas: 
@@ -82,10 +87,12 @@
         object-fit: cover;
         align-self: center;
         border-radius: 2rem;
+        box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
     }
     .mater__text {
         grid-area: texto;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        line-height: 150%;
     }
     .mater__title {
         grid-area: titulo;

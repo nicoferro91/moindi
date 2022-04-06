@@ -24,8 +24,10 @@
   z-index: 10;
   position: sticky;
   top: 0px;
-  background-color: #ffe6c8;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0px 0.5rem 2rem 0rem rgba(219, 181, 131, 0.876);
+  background-image: linear-gradient(45deg, #ffdcb1, #ffdca0, #ffdcb1, #fddca0, #ffdcb1, #ffdca0, #ffdcb1, #fddca0);
+  background-size: 100%; }
   .nav__barra .nav__title {
     text-align: center;
     font-family: "Josefin Sans", sans-serif;
@@ -50,10 +52,18 @@
     border-radius: 8px;
     font-size: 1.5rem;
     overflow: hidden;
-    transition: all 0.4s;
+    transition: background-color 0.4s;
     padding: 0.4rem; }
   .nav__barra .nav__link:hover {
     background-color: #ffc882; }
+
+@keyframes bganimation {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
 
 /* Variables */
 /* Contacto */
@@ -99,6 +109,23 @@
   gap: 2rem;
   align-items: center; }
 
+.contacto__box {
+  width: 160px;
+  height: 160px;
+  margin-top: 1rem; }
+
+.contacto__img {
+  height: 100%;
+  width: 100%;
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%);
+  transition: -webkit-filter 0.4s;
+  border-radius: 2rem; }
+
+.contacto__img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: none; }
+
 /* Variables */
 /* Productos */
 .card {
@@ -115,7 +142,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 200;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-style: italic; }
 
 .prod__grid {
@@ -133,32 +160,36 @@
   align-self: center;
   justify-self: center;
   background-color: #fff5e1;
-  transition: all 1s;
+  transition: transform 1s;
   margin-top: 0.5rem; }
 
 .prod__name {
   padding: 10px;
   z-index: 10;
-  background-color: #fff5e1;
   position: relative;
   top: -0.2rem;
   text-align: center;
   font-size: 1.2rem;
-  transition: all 1s;
+  transition: background-color, opacity 1s;
   opacity: 0; }
 
 .prod__img {
   width: 100%;
   height: 100%;
-  border-radius: 2rem; }
+  border-radius: 2rem;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2); }
 
 .prod__box:hover {
-  transform: scale(1.25); }
+  transform: scale(1.5); }
 
 .prod__box:hover .prod__name {
-  background-color: #fff5e1;
+  background-color: rgba(255, 245, 225, 0.8);
   opacity: 100; }
 
+/*
+$back-pink: rgb(255, 245, 225);
+$strong-pink: rgb(255, 230, 200);
+*/
 .mater-grid, .mater-grid--right {
   display: grid;
   grid-template-areas: "foto titulo" "foto texto";
@@ -177,10 +208,12 @@
     height: 100%;
     object-fit: cover;
     align-self: center;
-    border-radius: 2rem; }
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2); }
   .mater-grid .mater__text, .mater-grid--right .mater__text {
     grid-area: texto;
-    font-size: 1.2rem; }
+    font-size: 1.4rem;
+    line-height: 150%; }
   .mater-grid .mater__title, .mater-grid--right .mater__title {
     grid-area: titulo;
     align-self: center;
@@ -217,7 +250,8 @@
   width: calc(max(80vw, 1200px));
   max-width: 1800px;
   background-color: #fff5e1;
-  font-family: "Josefin Sans", sans-serif; }
+  font-family: "Josefin Sans", sans-serif;
+  padding-bottom: 4rem; }
 
 /* Galeria */
 .galeria {
@@ -293,19 +327,27 @@
 .footer {
   grid-area: footer;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   bottom: 0px;
-  width: fit-content;
-  background-color: #ffe6c8;
+  width: calc(max(80vw, 1200px));
+  max-width: 1800px;
+  background-color: #ffdcb1;
   font-size: 1.2rem;
   padding-left: 1rem;
-  padding-right: 1rem; }
+  padding-right: 1rem;
+  box-shadow: 0px -0.2rem 1rem 0rem rgba(219, 181, 131, 0.876); }
+
+.footer__link {
+  text-decoration: none;
+  color: black; }
 
 @media screen and (max-width: 1200px) {
   .main {
     margin-left: 0rem;
     margin-right: 0rem;
+    width: 100%; }
+  .footer {
     width: 100%; }
   .prod__grid {
     grid-template-columns: 1fr 1fr 1fr; }
@@ -388,7 +430,10 @@
     width: 100%; }
   .contacto__redes {
     padding: 0rem;
-    padding-top: 2rem; } }
+    padding-top: 2rem; }
+  .footer {
+    flex-direction: column;
+    align-items: center; } }
 
 @media screen and (max-height: 600px) {
   .header {
